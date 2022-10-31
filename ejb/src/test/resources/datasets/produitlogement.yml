@@ -1,0 +1,864 @@
+pays:
+    - id: pays01
+      code: CIV
+      designation: Côte d'Ivoire
+      indicatifInternationnal: +225
+    - id: pays02
+      code: SEN
+      designation: Senegal
+      indicatifInternationnal: +221
+ville:
+    - id: ville01
+      designation: Abidjan
+      pays_id: pays01
+    - id: ville02
+      designation: Dakar
+      pays_id: pays02      
+promoteur:
+    - id: promoteur01
+      designation: promoteur01
+      adresse: Adjamé
+      raisonSociale: SICOGI
+      sigle: SICOGI
+      identifiantLegal: Bouake Fofana
+      email: alzoumamoussa18@univmetiers.ci
+      tel: telSicogi
+      ville_id: ville01
+      emailAdmin: amdinpromoteur01@siliconwise.com
+      nomAdmin: amdinPromoteur01
+      prenomAdmin: amdinPromoteur01
+      version: 0
+    - id: promoteur02
+      designation: promoteur02
+      adresse: Corniche
+      raisonSociale: BATIBO
+      sigle: BATIBO
+      identifiantLegal: Assoumou Leonard
+      email: batibo@email.com
+      tel: telBatibo
+      estActive: true
+      ville_id: ville02
+      emailAdmin: amdinpromoteur02@siliconwise.com
+      nomAdmin: amdinPromoteur02
+      prenomAdmin: amdinPromoteur02
+      version: 0
+programmeimmobilier:
+    - id: programme01
+      code: CCD
+      designation: Concorde
+      estValide: false
+      promoteur_id: promoteur01 
+      ville_id: ville01
+      version: 0
+    - id: programme02
+      code: IRIS
+      designation: Iris
+      promoteur_id: promoteur02 
+      ville_id: ville01
+      version: 0
+    - id: programme03
+      code: SIWISE
+      designation: SIWISE
+      promoteur_id: promoteur02 
+      ville_id: ville01
+      version: 0
+familleproprieteproduitlogement:
+    - id: famille01
+      designation: Valeur
+    - id: famille02
+      designation: Confort 
+referencefamille:
+    - id: ref.famille.typeValeur
+      designation: Famille des types de valeur
+      designationTr: Value type family
+      absolutePath: //
+    - id: ref.famille.typeLogement
+      designation: Famille des types de logements
+      designationTr: House type family
+      absolutePath: //
+    - id: ref.famille.typeDocument
+      designation: Famille des types de documents
+      designationTr: Document type family
+      absolutePath: //
+    - id: ref.famille.typeFinancement
+      designation: Famille des types de financements
+      designationTr: Financing type family
+      absolutePath: //
+    - id: ref.famille.typePeriodicite
+      designation: Famille des types de la periodicite
+      designationTr: Periodicity type family
+      absolutePath: //
+    - id: ref.famille.pallier
+      designation: Famille des palliers sur situation
+      designationTr: Level family
+      absolutePath: //
+    - id: ref.famille.demandeReservation.typeDocument
+      designation: Famille des types de documents demande 
+      designationTr: Document type family Request 
+      absolutePath: //
+    - id: ref.famille.typeCaracteristiqueDemande
+      designation: Famille Types Caracteristiques Demande Reservation
+      designationTr: Caracteristique type family Request 
+      absolutePath: //
+reference:
+    - id: ref.element.typeValeur.integer
+      famille_id: ref.famille.typeValeur     
+    - id: ref.element.typeValeur.string
+      famille_id: ref.famille.typeValeur 
+    - id: ref.element.typeValeur.date
+      famille_id: ref.famille.typeValeur
+    - id: ref.element.typeValeur.datetime
+      famille_id: ref.famille.typeValeur 
+    - id: ref.element.typeValeur.long
+      famille_id: ref.famille.typeValeur 
+    - id: ref.element.typeValeur.float
+      famille_id: ref.famille.typeValeur 
+    - id: ref.element.typeValeur.boolean
+      famille_id: ref.famille.typeValeur
+    - id: ref.element.typeValeur.time
+      famille_id: ref.famille.typeValeur  
+    - id: ref.element.typeValeur.double
+      famille_id: ref.famille.typeValeur 
+    - id: ref.element.typeValeur.reference
+      famille_id: ref.famille.typeValeur 
+    - id: ref.element.valeur.villa
+      designation: Villa
+      famille_id: ref.famille.typeLogement
+    - id: ref.element.valeur.appartement
+      designation: Appartement
+      famille_id: ref.famille.typeLogement
+    - id: ref.element.typeValeur.image
+      designation: Image
+      famille_id: ref.famille.typeDocument
+    - id: ref.element.typeValeur.imageConsultation
+      designation: Image Consultation
+      famille_id: ref.famille.typeDocument
+    - id: ref.element.typeValeur.video
+      designation: Video
+      famille_id: ref.famille.typeDocument
+    - id: ref.element.valeur.comptant
+      designation: Comptant
+      famille_id: ref.famille.typeFinancement
+    - id: ref.element.valeur.creditbancaire
+      designation: Credit Bancaire
+      famille_id: ref.famille.typeFinancement
+    - id: ref.element.valeur.comptantsursituation
+      designation: Comptant sur situation
+      famille_id: ref.famille.typeFinancement
+    - id: ref.element.valeur.temperament
+      designation: temperament
+      famille_id: ref.famille.typeFinancement
+    - id: ref.element.valeur.tierscollecteur
+      designation: tiers collecteur
+      famille_id: ref.famille.typeFinancement
+    - id: ref.element.valeur.fondation
+      designation: Pallier fondation
+      famille_id: ref.famille.pallier
+    - id: ref.element.valeur.chainage
+      designation: Pallier chainage
+      famille_id: ref.famille.pallier
+    - id: ref.element.valeur.cle
+      designation: Pallier remise cle
+      famille_id: ref.famille.pallier
+    - id: ref.element.valeur.jour
+      designation: Jour
+      famille_id: ref.famille.typePeriodicite
+    - id: ref.element.valeur.semaine
+      designation: Semaine
+      famille_id: ref.famille.typePeriodicite
+    - id: ref.element.valeur.mois
+      designation: Mois
+      famille_id: ref.famille.typePeriodicite
+    - id: ref.element.valeur.trimestre
+      designation: Trimestre
+      famille_id: ref.famille.typePeriodicite
+    - id: ref.element.valeur.semestre
+      designation: Semestre
+      famille_id: ref.famille.typePeriodicite
+    - id: ref.element.demandeAcquisation.typeDocument.CNI
+      designation: Carte d'Identité Nationale
+      famille_id: ref.famille.demandeReservation.typeDocument
+    - id: ref.element.demandeAcquisation.typeDocument.PP
+      designation: Passport
+      famille_id: ref.famille.demandeReservation.typeDocument
+    - id: ref.element.demandeAcquisation.typeDocument.CP
+      designation: Carte professionnelle
+      famille_id: ref.famille.demandeReservation.typeDocument
+    - id: ref.element.demandeAcquisation.typeDocument.CR
+      designation: Carte de Residence
+      famille_id: ref.famille.demandeReservation.typeDocument
+    - id: ref.element.typeCaracteristiqueDemande.Fonction
+      designation: Fonction de l'acquereur
+      famille_id: ref.famille.typeCaracteristiqueDemande
+    - id: ref.element.typeCaracteristiqueDemande.Residence
+      designation: Residence  de l'acquereur
+      famille_id: ref.famille.typeCaracteristiqueDemande
+    - id: ref.element.typeCaracteristiqueDemande.Activite
+      designation: Activité  de l'acquereur
+      famille_id: ref.famille.typeCaracteristiqueDemande
+proprieteproduitlogement:
+    - id: propriete01
+      code: TypeLogement
+      designation: Type de Logement
+      type_id: ref.element.typeValeur.reference   
+      familleProprieteProduitLogement_id: famille02
+      estObligatoire: true
+      estDansListe: false
+      estCaracteristiqueProduitLogement: false  
+      version: 0    
+    - id: propriete02
+      code: NombrePieces
+      designation: Nombre de Pièces
+      type_id: ref.element.typeValeur.integer     
+      familleProprieteProduitLogement_id: famille02
+      estObligatoire: true
+      estDansListe: false
+      estCaracteristiqueProduitLogement: false
+      version: 0
+    - id: propriete03
+      code: Prix
+      designation: Prix d'acquisition
+      type_id: ref.element.typeValeur.double
+      familleProprieteProduitLogement_id: famille01
+      estObligatoire: true
+      estDansListe: false
+      estCaracteristiqueProduitLogement: false
+      version: 0
+    - id: propriete04
+      code: DateCreation
+      designation: Date de creation 
+      type_id: ref.element.typeValeur.date     
+      familleProprieteProduitLogement_id: famille01
+      estObligatoire: false
+      estDansListe: true
+      estCaracteristiqueProduitLogement: false
+      version: 0
+    - id: propriete05
+      code: Piscine
+      designation: le logement a une piscine 
+      type_id: ref.element.typeValeur.boolean     
+      familleProprieteProduitLogement_id: famille02
+      estObligatoire: false
+      estCaracteristiqueProduitLogement: false
+      estDansListe: true
+      version: 0
+    - id: propriete06
+      code: Localisation
+      designation: la localisation dudit logement en question 
+      type_id: ref.element.typeValeur.string     
+      familleProprieteProduitLogement_id: famille02
+      estObligatoire: true
+      estDansListe: true
+      estCaracteristiqueProduitLogement: false
+      version: 0
+    - id: propriete07
+      code: DateTimeCreation
+      designation: DateTime de creation 
+      type_id: ref.element.typeValeur.datetime     
+      familleProprieteProduitLogement_id: famille01
+      estObligatoire: false
+      estDansListe: true
+      estCaracteristiqueProduitLogement: false
+      version: 0
+    - id: propriete08
+      code: HeureEnregistrement
+      designation: L'heure à laquelle le produit logement est enregistré par le promoteur 
+      type_id: ref.element.typeValeur.time     
+      familleProprieteProduitLogement_id: famille01
+      estObligatoire: false
+      estDansListe: true
+      estCaracteristiqueProduitLogement: false
+      version: 0
+    - id: propriete09
+      code: ImageConsultation
+      designation: Image de consultation 
+      type_id: ref.element.typeValeur.image     
+      familleProprieteProduitLogement_id: famille01
+      estObligatoire: false
+      estDansListe: true
+      estCaracteristiqueProduitLogement: false
+      version: 0
+    - id: propriete10
+      code: VideoConsultation
+      designation: Video de consultation 
+      type_id: ref.element.typeValeur.video     
+      familleProprieteProduitLogement_id: famille01
+      estObligatoire: false
+      estDansListe: true
+      estCaracteristiqueProduitLogement: false
+      version: 0
+documentformat:
+    - id: documentformat01
+      designation: image
+      version: 0
+    - id: documentformat02
+      designation: video
+      version: 0
+    - id: documentformat03
+      designation: Document Format 01
+      typeMime: text/plain
+      extension: .txt
+      version: 0
+document:
+    - id: document01
+      designation: ImageProduitLogement
+      description: Image du produit logement
+      format_id: documentformat01
+      typedocument_id: ref.element.typeValeur.image
+      version: 0
+    - id: document02
+      designation: VideoProduitLogement
+      description: Video du produit logement
+      format_id: documentformat02
+      typedocument_id: ref.element.typeValeur.video
+      version: 0
+    - id: document03
+      designation: Image1ProduitLogement
+      description: Image1 du produit logement
+      format_id: documentformat01
+      typedocument_id: ref.element.typeValeur.image
+      version: 0
+    - id: document04
+      designation: Image2ProduitLogement
+      description: Image2 du produit logement
+      format_id: documentformat01
+      typedocument_id: ref.element.typeValeur.image
+      version: 0
+    - id: document05
+      designation: Vidoe2ProduitLogement
+      description: Video2 du produit logement
+      format_id: documentformat02
+      typedocument_id: ref.element.typeValeur.video
+      version: 0
+    - id: document06
+      designation: Image Consultation d'un produit logement
+      description: Image Consultation d'un produit logement
+      path: ImageConsultation.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.imageConsultation
+      version: 0
+    - id: document07
+      designation: Image liste 1 
+      description: Image liste 1
+      path: imageList1.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.image
+      version: 0
+    - id: document08
+      designation: Image liste 2 
+      description: Image liste 2
+      path: imageList2.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.image
+      version: 0
+    - id: document09
+      designation: Image liste 3
+      description: Image liste 3
+      path: imageList3.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.image
+      version: 0
+    - id: document10
+      designation: Video liste 1
+      description: Video liste 1
+      path: videoList1.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.video
+      version: 0
+    - id: document11
+      designation: Video liste 2
+      description: Video liste 2
+      path: videoList2.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.video
+      version: 0
+    - id: document12
+      designation: Video liste 3
+      description: Video liste 3
+      path: videoList3.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.video
+      version: 0
+    - id: document13
+      designation: programme image 1
+      description: programme image 1
+      path: programmeimage1.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.image
+      version: 0
+    - id: document14
+      designation: programme image 2
+      description: programme image 2
+      path: programmeimage2.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.image
+      version: 0
+    - id: document15
+      designation: programme image 3
+      description: programme image 3
+      path: programmeimage3.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.image
+      version: 0
+    - id: document16
+      designation: programme video 1
+      description: programme video 1
+      path: programmevideo1.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.video
+      version: 0
+    - id: document17
+      designation: programme video 2
+      description: programme video 2
+      path: programmevideo2.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.video
+      version: 0
+    - id: document18
+      designation: programme video 3
+      description: programme video 3
+      path: programmevideo3.txt
+      format_id: documentformat03
+      typedocument_id: ref.element.typeValeur.video
+      version: 0
+produitlogement:
+    - id: produit01
+      code: Senateur
+      designation: Villa Duplex 4 Pièces
+      programmeimmobilier_id: programme01  
+      estValide: true 
+      estActive: true
+      version: 0        
+    - id: produit02
+      code: Reve
+      designation: Appartement de luxe 4 Pièces
+      programmeimmobilier_id: programme02   
+      estActive: true
+      version: 0  
+    - id: produit03
+      code: Serenité
+      designation: Villa basse 3 Pièces
+      programmeimmobilier_id: programme01
+      estActive: true
+      version: 0
+    - id: produit04
+      code: Fiabilité
+      designation: Villa Duplex
+      programmeimmobilier_id: programme01
+      estActive: true
+      version: 0
+    - id: produit05
+      code: Somptueux
+      designation: Château
+      programmeimmobilier_id: programme01
+      estActive: true
+      version: 0
+logement:
+    - id: logement01
+      designation:  logement01
+      description:  logement01
+      estActive:  true
+      produitLogement_id: produit01 
+      version: 0
+caracteristiqueproduitlogement:
+    - id: caracteristique01
+      designation: caracteristique01
+      produitLogement_id: produit01
+      proprieteProduitLogement_id: propriete01
+      version: 0
+    - id: caracteristique02
+      designation: caracteristique02
+      produitLogement_id: produit01
+      proprieteProduitLogement_id: propriete02
+      version: 0
+    - id: caracteristique03
+      designation: caracteristique03
+      produitLogement_id: produit01
+      proprieteProduitLogement_id: propriete03 
+      version: 0
+    - id: caracteristique04
+      designation: caracteristique04
+      produitLogement_id: produit02
+      proprieteProduitLogement_id: propriete01
+      version: 0
+    - id: caracteristique05
+      designation: caracteristique05
+      produitLogement_id: produit02
+      proprieteProduitLogement_id: propriete02 
+      version: 0
+    - id: caracteristique06
+      designation: caracteristique06
+      produitLogement_id: produit02
+      proprieteProduitLogement_id: propriete03
+      version: 0
+    - id: caracteristique07
+      designation: caracteristique07
+      produitLogement_id: produit03
+      proprieteProduitLogement_id: propriete01
+      version: 0
+    - id: caracteristique08
+      designation: caracteristique08
+      produitLogement_id: produit03 
+      proprieteProduitLogement_id: propriete02 
+      version: 0
+    - id: caracteristique09
+      designation: caracteristique09
+      produitLogement_id: produit04
+      proprieteProduitLogement_id: propriete03
+      version: 0
+    - id: caracteristique10
+      designation: caracteristique10
+      produitLogement_id: produit03
+      proprieteProduitLogement_id: propriete04
+      version: 0
+    - id: caracteristique11
+      designation: caracteristique11
+      produitLogement_id: produit01
+      proprieteProduitLogement_id: propriete05
+      version: 0
+    - id: caracteristique12
+      designation: caracteristique12
+      produitLogement_id: produit01
+      proprieteProduitLogement_id: propriete06
+      version: 0
+    - id: caracteristique13
+      designation: caracteristique13
+      produitLogement_id: produit05
+      proprieteProduitLogement_id: propriete07
+      version: 0
+    - id: caracteristique14
+      designation: caracteristique14
+      produitLogement_id: produit05
+      proprieteProduitLogement_id: propriete08
+      version: 0
+    - id: caracteristique15
+      designation: caracteristique15
+      produitLogement_id: produit03
+      proprieteProduitLogement_id: propriete05
+      version: 0
+    - id: caracteristique16
+      designation: caracteristique16
+      produitLogement_id: produit01
+      proprieteProduitLogement_id: propriete04
+      version: 0
+    - id: caracteristique17
+      designation: caracteristique17
+      produitLogement_id: produit01
+      proprieteProduitLogement_id: propriete02
+      version: 0
+    - id: caracteristique18
+      designation: caracteristique18
+      produitLogement_id: produit01 
+      proprieteProduitLogement_id: propriete02  
+      version: 0
+    - id: caracteristique19
+      designation: caracteristique19
+      produitLogement_id: produit03
+      proprieteProduitLogement_id: propriete03  
+      version: 0
+    - id: caracteristique20
+      designation: caracteristique20
+      description: Terrain de foot
+      produitLogement_id: produit05
+      proprieteProduitLogement_id: propriete03  
+      version: 0
+    - id: caracteristique21
+      designation: caracteristique21
+      produitLogement_id: produit02
+      proprieteProduitLogement_id: propriete04 
+      version: 0
+    - id: caracteristique22
+      designation: caracteristique22
+      produitLogement_id: produit04
+      proprieteProduitLogement_id: propriete04 
+      version: 0
+    - id: caracteristique23
+      designation: caracteristique23
+      produitLogement_id: produit05
+      proprieteProduitLogement_id: propriete04 
+      version: 0
+    - id: caracteristique24
+      designation: caracteristique24
+      produitLogement_id: produit02
+      proprieteProduitLogement_id: propriete06 
+      version: 0
+    - id: caracteristique25
+      designation: caracteristique25
+      produitLogement_id: produit01
+      proprieteProduitLogement_id: propriete07
+      version: 0
+    - id: caracteristique26
+      designation: caracteristique26
+      produitLogement_id: produit02
+      proprieteProduitLogement_id: propriete07
+      version: 0
+    - id: caracteristique27
+      designation: caracteristique27
+      produitLogement_id: produit02
+      proprieteProduitLogement_id: propriete09
+      version: 0
+valeurcaracteristiqueproduitlogementreference:
+    - id: caracteristique01
+      valeur_id: ref.element.valeur.villa
+    - id: caracteristique04
+      valeur_id: ref.element.valeur.appartement
+valeurcaracteristiqueproduitlogementstring:
+    - id: caracteristique12
+      valeur: Cocody
+    - id: caracteristique24
+      valeur: TreichVille
+valeurcaracteristiqueproduitlogementinteger:
+    - id: caracteristique02
+      valeur: 4
+    - id: caracteristique05
+      valeur: 3
+    - id: caracteristique08
+      valeur: 5
+    - id: caracteristique18
+      valeur: 5
+valeurcaracteristiqueproduitlogementdate:
+    - id: caracteristique10
+      valeur: 2018-12-12
+    - id: caracteristique16
+      valeur: 2019-12-12
+    - id: caracteristique21
+      valeur: 2015-12-12
+    - id: caracteristique22
+      valeur: 2016-12-12
+    - id: caracteristique23
+      valeur: 2017-12-12
+valeurcaracteristiqueproduitlogementdatetime:
+    - id: caracteristique13
+      valeur: 2020-12-12 12:12:12  
+    - id: caracteristique25
+      valeur: 2021-12-12 12:12:12 
+    - id: caracteristique26
+      valeur: 2019-12-12 12:12:12 
+valeurcaracteristiqueproduitlogementboolean:
+    - id: caracteristique11
+      valeur: true
+    - id: caracteristique15
+      valeur: true
+valeurcaracteristiqueproduitlogementdouble:
+    - id: caracteristique03
+      valeur: 100000
+    - id: caracteristique19
+      valeur: 120000
+    - id: caracteristique06
+      valeur: 150000
+    - id: caracteristique09
+      valeur: 405000
+    - id: caracteristique20
+      valeur: 140000
+typefinancement:
+    - id: ref.element.valeur.comptant
+      code: Comptant
+      designation: Comptant
+      description: Paiement comptant
+      estvalideParEfi: false   
+      version: 0 
+    - id: ref.element.valeur.temperament
+      code: Temperament
+      designation: Temperament
+      description: Temperament
+      estvalideParEfi: false   
+      version: 0 
+    - id: ref.element.valeur.tierscollecteur
+      code: TiersCollecteur
+      designation: Tiers Collecteur
+      description: Tiers Collecteur
+      estvalideParEfi: false   
+      version: 0 
+    - id: ref.element.valeur.creditbancaire
+      code: CreditBancaire
+      designation: Credit bancaire
+      description: Paiement credit bancaire
+      estvalideParEfi: true   
+      version: 0
+    - id: ref.element.valeur.comptantsursituation
+      code: ComptantSituation
+      designation: Comptant sur situation
+      description: Paiement comptant sur situation
+      estvalideParEfi: false   
+      version: 0
+efi:
+    - id: sgbci
+      designation: SGBCI
+      description: SGBCI
+      adresse: xxxxxxxxx
+      identifiantLegal: SGBCI
+      raisonSociale: Société Générale 
+      sigle:  SGBCI
+      tel: 00-00-00-00-00-00
+      email: moussa.alzouma@siliconwise.biz
+      pays_id: pays01
+      emailAdmin: sgbci@siliconwise.com
+      nomAdmin: sgbci
+      prenomAdmin: sgbci
+      version: 0
+    - id: bicici
+      designation: BICICI
+      description: BICICI
+      adresse: xxxxxxxxx
+      identifiantLegal: BICICI2
+      raisonSociale: BICICI
+      tel: 00-00-00-00-00-00
+      sigle:  BICICI
+      email: alzoumamoussa18@univmetiers.ci
+      pays_id: pays01
+      estActive: true
+      emailAdmin: bicici@siliconwise.com
+      nomAdmin: bicici
+      prenomAdmin: bicici
+      version: 0
+    - id: ecobank
+      designation: ECOBANK
+      description: ECOBANK
+      adresse: xxxxxxxxx
+      identifiantLegal: ECOBANK3
+      raisonSociale: ECOBANK
+      sigle:  ECOBANK
+      tel: 00-00-00-00-00-00
+      email: mahamadoualzouma12@gmail.com
+      pays_id: pays01
+      emailAdmin: ecobank@siliconwise.com
+      nomAdmin: ecobank
+      prenomAdmin: ecobank
+      version: 0
+    - id: boa
+      designation: BOA
+      description: BOA
+      adresse: xxxxxxxxx
+      identifiantLegal: BOA3
+      raisonSociale: BOA
+      sigle:  BOA
+      tel: 00-00-00-00-00-00
+      email: emmanuel.kouevi@siliconwise.biz
+      pays_id: pays01
+      emailAdmin: boa@siliconwise.com
+      nomAdmin: boa
+      prenomAdmin: boa
+      version: 0
+creditBancaire:
+    - id: creditbancaire1
+      duree: 60
+      taux: 6
+      efi_id: sgbci
+    - id: creditbancaire2
+      duree: 60
+      taux: 6
+      efi_id: bicici
+modefinancement:
+    - id: modefinancement1
+      designation: comptant
+      description: Paiement au comptant
+      estValide: false
+      version: 0
+      typeFinancement_id: ref.element.valeur.comptant
+      programmeImmobilier_id: programme01
+    - id: modefinancement2
+      designation: Credit Bancaire
+      description: Paiement credit bancaire
+      estValide: false
+      version: 0
+      creditBancaire_id: creditbancaire1
+      typeFinancement_id: ref.element.valeur.creditbancaire
+      programmeImmobilier_id: programme01 
+    - id: modefinancement3
+      designation: Credit Bancaire bicici
+      description: Paiement credit bancaire
+      estValide: false
+      version: 0
+      creditBancaire_id: creditbancaire2
+      typeFinancement_id: ref.element.valeur.creditbancaire
+      programmeImmobilier_id: programme01 
+tiers:
+    - id: tiers01
+      designation: Etat 
+      description: Etat de Côte d'Ivoire
+      email: alzoumamoussa18@univmetiers.ci
+      version: 0
+produitlogementdocument:
+    - id: entitydocument01
+      produitLogement_id: produit01
+      document_id: document06
+      version: 0
+    - id: entitydocument02
+      produitLogement_id: produit01
+      document_id: document07
+      version: 0
+    - id: entitydocument03
+      produitLogement_id: produit01
+      document_id: document08
+      version: 0
+    - id: entitydocument04
+      produitLogement_id: produit01
+      document_id: document09
+      version: 0
+    - id: entitydocument05
+      produitLogement_id: produit01
+      document_id: document10
+      version: 0
+    - id: entitydocument06
+      produitLogement_id: produit01
+      document_id: document11
+      version: 0
+    - id: entitydocument07
+      produitLogement_id: produit01
+      document_id: document12
+      version: 0
+programmeimmobilierdocument:
+    - id: entitydocument01
+      programmeImmobilier_id: programme03
+      document_id: document13
+      version: 0
+    - id: entitydocument02
+      programmeImmobilier_id: programme03
+      document_id: document14
+      version: 0
+    - id: entitydocument03
+      programmeImmobilier_id: programme03
+      document_id: document15
+      version: 0
+    - id: entitydocument04
+      programmeImmobilier_id: programme03
+      document_id: document16
+      version: 0
+    - id: entitydocument05
+      programmeImmobilier_id: programme03
+      document_id: document17
+      version: 0
+    - id: entitydocument06
+      programmeImmobilier_id: programme03
+      document_id: document18
+      version: 0
+user:
+    - id: user01
+      nom: Bernardin Gnakale
+      adresse: Cocody
+      email: moussa.alzouma@siliconwise.biz
+      telephone: 0101010101
+      motDePasse: xxxxxxxxx
+      ville_id: ville01
+      version: 0
+    - id: user02
+      nom: Moussa Soussou
+      adresse: Cocody
+      email: alzoumamoussa18@univmetiers.ci
+      telephone: 0101010101
+      motDePasse: xxxxxxxxx
+      ville_id: ville01
+      version: 0
+codeconfirmation:
+    - id: codeconfirmation01
+      idUser: user02
+      dateExpiration: 2021-10-12 12:12:12
+      version: 0
+    - id: codeconfirmation02
+      idUser: user03
+      dateExpiration: 2021-10-12 12:12:12
+      version: 0
+    - id: codeconfirmation03
+      idUser: user01
+      dateExpiration: 2021-10-9 12:12:12
+      version: 0

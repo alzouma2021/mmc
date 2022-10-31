@@ -1,0 +1,23 @@
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://jboss.org/schema/arquillian
+        http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+    <engine>
+        <property name="deploymentExportPath">target/deployments</property>
+    </engine>
+    
+    <!-- Chemin du conteneur à charger -->
+    <container qualifier="wildfly-managed" default="true">
+        <configuration>
+            <!-- <property name="jbossHome">target/wildfly-21.0.2.Final</property> -->
+            <property name="jbossHome">/home/sysadmin/bin/wildfly</property>
+            <!-- <property name="startupTimeoutInSeconds">1800</property> -->
+        </configuration>
+    </container>
+    
+    <!-- Datasource pour le chargement des tables de la base de données avant les tests -->
+    <extension qualifier="persistence">
+    		<property name="defaultDataSource">java:jboss/datasources/ExampleDS</property>	
+	</extension>
+</arquillian>

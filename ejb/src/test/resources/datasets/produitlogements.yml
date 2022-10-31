@@ -1,0 +1,113 @@
+globalparameters:
+pays:
+    - id: pays01
+      code: CIV
+      designation: Côte d'Ivoire
+      indicatifInternationnal: +225
+    - id: pays02
+      code: SEN
+      designation: Senegal
+      indicatifInternationnal: +221
+ville:
+    - id: ville01
+      designation: Abidjan
+      pays_id: pays01
+    - id: ville02
+      designation: Dakar
+      pays_id: pays02      
+promoteur:
+    - id: promoteur01
+      adresse: Adjamé
+      raisonSociale: SICOGI
+      sigle: SICOGI
+      identifiantLegal: Bouake Fofana
+      email: sicogi@email.com
+      tel: telSicogi
+      ville_id: ville01
+    - id: promoteur02
+      adresse: Corniche
+      raisonSociale: BATIBO
+      sigle: BATIBO
+      identifiantLegal: Assoumou Leonard
+      email: batibo@email.com
+      tel: telBatibo
+      ville_id: ville02
+programmeimmobilier:
+    - id: programme01
+      code: CCD
+      designation: Concorde
+      promoteur: promoteur01 
+    - id: programme02
+      code: IRIS
+      designation: Iris
+      promoteur: promoteur02 
+familleproprieteproduitlogement:
+    - id: famille01
+      designation: Valeur
+    - id: famille02
+      designation: Confort 
+referencefamille:
+    - id: ref.famille.typeValeur
+      designation: Famille des types de valeur
+      designationTr: Value type family
+      absolutePath: //
+reference:
+    - id: ref.element.typeValeur.integer
+      famille_id: ref.famille.typeValeur     
+    - id: ref.element.typeValeur.string
+      famille_id: ref.famille.typeValeur 
+proprieteproduitlogement:
+    - id: propriete01
+      code: TypeLogement
+      designation: Type de Logement
+      type_id: ref.element.typeValeur.string     
+      fammilleProprieteProduitLogement_id: famille02
+      estObligatoire: true
+      estDansListe: false      
+    - id: propriete02
+      code: NombrePieces
+      designation: Nombre de Pièces
+      type_id: ref.element.typeValeur.integer     
+      fammilleProprieteProduitLogement_id: famille02
+      estObligatoire: true
+      estDansListe: false
+    - id: propriete03
+      code: Prix
+      designation: Prix d'acquisition
+      type_id: ref.element.typeValeur.integer     
+      fammilleProprieteProduitLogement_id: famille01
+      estObligatoire: true
+      estDansListe: false
+caracteristiqueproduitlogement:
+    - id: caracteristique01
+      proprieteProduitLogement_id: propriete01
+    - id: caracteristique02
+      proprieteProduitLogement_id: propriete02
+    - id: caracteristique03
+      proprieteProduitLogement_id: propriete03 
+produitlogement:
+    - id: produit01
+      code: Senateur
+      designation: Villa Duplex 4 Pièces
+      url: lien
+      programmeimmobilierid: programme01           
+    - id: produit02
+      code: Reve
+      designation: Appartement de luxe 4 Pièces
+      url: lien
+      programmeimmobilierid: programme02     
+    - id: produit03
+      code: Serenité
+      designation: Villa basse 3 Pièces
+      url: lien
+      programmeimmobilierid: programme01
+produitlogement_caracteristiqueproduitlogement:
+    - ProduitLogement_id: produit01
+      caracteristiqueProduitLogement_id: caracteristique01
+    - ProduitLogement_id: produit01
+      caracteristiqueProduitLogement_id: caracteristique02
+    - ProduitLogement_id: produit01
+      caracteristiqueProduitLogement_id: caracteristique03 
+
+     
+             

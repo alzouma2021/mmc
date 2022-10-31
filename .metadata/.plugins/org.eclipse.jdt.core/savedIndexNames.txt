@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/home/sysadmin/Documents/SoftEng/projets/ejbinear/.metadata/.plugins/org.eclipse.jdt.core
