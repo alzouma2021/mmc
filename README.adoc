@@ -30,6 +30,7 @@ Les technologies utilisées pour la réalisation de ce projet sont:
 - OPENPROJECT
 - GIT
 - MODELIO.
+- SERVEUR D'APPLICATIONS WILDFLY 21
 
 Ce projet est toujours en cours de réalisation.
 
